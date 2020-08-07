@@ -1,0 +1,65 @@
+@BASE_URL=http://localhost:8000/api
+
+
+POST {{BASE_URL}}/users/addUser
+Content-Type: application/json
+
+{
+    "name":"Yunus Ç.",
+    "username":"yunuscag4",
+    "email":"yunuscag4@example.com",
+    "password":"654321"
+}
+###
+POST {{BASE_URL}}/users/
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjA1ZWM0NGNkNzAzOTI4M2MxNjFiN2IiLCJpc0FjdGl2ZSI6dHJ1ZSwiaWF0IjoxNTk0MjIzNzc2LCJleHAiOjE1OTY4MTU3NzZ9.5DKmdWGwZqLNU5yox_atBuezUYQAIwcezIXbdWXMgQo
+Content-Type: application/json
+
+{
+    "username":"yunuscag2"
+}
+###
+GET {{BASE_URL}}/users/current
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjA1ZWM0NGNkNzAzOTI4M2MxNjFiN2IiLCJpc0FjdGl2ZSI6dHJ1ZSwiaWF0IjoxNTk0MzgzODc5LCJleHAiOjE1OTY5NzU4Nzl9.SMKNojYkFQhLF16fUxXqk-paBNcGp7aVJjAC4C4BIeM
+
+###
+POST {{BASE_URL}}/users/login
+Content-Type: application/json
+
+{
+    "email":"yunuscag4@example.com",
+    "password":"654321"
+}
+###
+POST  {{BASE_URL}}/users/addFriend/5f05ec2ecd7039283c161b77
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjA1ZWM0NGNkNzAzOTI4M2MxNjFiN2IiLCJpc0FjdGl2ZSI6dHJ1ZSwiaWF0IjoxNTk0MjIzNzc2LCJleHAiOjE1OTY4MTU3NzZ9.5DKmdWGwZqLNU5yox_atBuezUYQAIwcezIXbdWXMgQo
+###
+POST  {{BASE_URL}}/users/deleteFriend/5f05c731c36a8a43c08f87a7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjA1ZWM0NGNkNzAzOTI4M2MxNjFiN2IiLCJpc0FjdGl2ZSI6dHJ1ZSwiaWF0IjoxNTk0MjIzNzc2LCJleHAiOjE1OTY4MTU3NzZ9.5DKmdWGwZqLNU5yox_atBuezUYQAIwcezIXbdWXMgQo
+###
+POST {{BASE_URL}}/posts/
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjA1ZWM0NGNkNzAzOTI4M2MxNjFiN2IiLCJpc0FjdGl2ZSI6dHJ1ZSwiaWF0IjoxNTk0MjIzNzc2LCJleHAiOjE1OTY4MTU3NzZ9.5DKmdWGwZqLNU5yox_atBuezUYQAIwcezIXbdWXMgQo
+Content-Type: application/json
+
+{
+    "title":"Merhaba5",
+    "description":"Merhaba Arkadaşlar Nasılsınız ? 5"
+}
+###
+POST {{BASE_URL}}/posts/ratePost/5f05ed269d71eb336cd95c7e
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjA1ZWM0NGNkNzAzOTI4M2MxNjFiN2IiLCJpc0FjdGl2ZSI6dHJ1ZSwiaWF0IjoxNTk0MjIzNzc2LCJleHAiOjE1OTY4MTU3NzZ9.5DKmdWGwZqLNU5yox_atBuezUYQAIwcezIXbdWXMgQo
+Content-Type: application/json
+
+{
+    "rateNumber":3.5
+}
+###
+POST {{BASE_URL}}/posts/likePost/5f05ed269d71eb336cd95c7e
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjA1ZWM0NGNkNzAzOTI4M2MxNjFiN2IiLCJpc0FjdGl2ZSI6dHJ1ZSwiaWF0IjoxNTk0MjIzNzc2LCJleHAiOjE1OTY4MTU3NzZ9.5DKmdWGwZqLNU5yox_atBuezUYQAIwcezIXbdWXMgQo
+###
+POST {{BASE_URL}}/posts/unlikePost/5f05cfec92bb6411504c802d
+Authorization:yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjA1ZWM0NGNkNzAzOTI4M2MxNjFiN2IiLCJpc0FjdGl2ZSI6dHJ1ZSwiaWF0IjoxNTk0MjIzNjk5LCJleHAiOjE1OTY4MTU2OTl9.PEFhDu6VF3YqaCNMs_E19nEeCLCtobPj3AFyLjk1quY
+
+###
+GET {{BASE_URL}}/posts/?page=1&pagination=10&onlyFriend=false
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjA1ZWM0NGNkNzAzOTI4M2MxNjFiN2IiLCJpc0FjdGl2ZSI6dHJ1ZSwiaWF0IjoxNTk0MzgzNDEyLCJleHAiOjE1OTY5NzU0MTJ9.mYcJaQmLCeLjsCEDYRz_3tipGKuiruf401gdpu7K1Z0
